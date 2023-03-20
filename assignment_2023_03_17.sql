@@ -7,7 +7,7 @@ CREATE TABLE jobs
     job_id INT PRIMARY KEY,
     job_title VARCHAR(255),
     min_salary FLOAT NOT NULL CHECK(min_salary>1000), --Min_salary must be greater than 1000
-    max_salary FLOAT NOT NULL
+    max_salary FLOATÂ NOTÂ NULL
 );
 CREATE TABLE regions
 (
@@ -131,7 +131,7 @@ VALUES('11','SONIA','DAS','MOTHER','1004'),
 	  ('15','SUMAN','PAUL','FATHER','1005');
 
 
---3.a. Column: In departments table, add a new field ‘manager_name’ of type VARCHAR
+--3.a. Column: In departments table, add a new field â€˜manager_nameâ€™ of type VARCHAR
 ALTER TABLE departments ADD manager_name VARCHAR(255);
 --3.b. REMOVE field max_salary from jobs. 
 ALTER TABLE jobs DROP COLUMN max_salary;
