@@ -87,9 +87,10 @@ JOIN dependents d ON e.employee_id = d.employee_id
 JOIN jobs j ON e.job_id = j.job_id
 JOIN departments dpt ON e.department_id = dpt.department_id
 JOIN locations l ON dpt.location_id = l.location_id
+JOIN employees m on e.manager_id = m.employee_id
 WHERE 
 d.city != l.city -- employees hired in the past 3 years
 AND e.hire_date >= DATEADD(YEAR, -3, GETDATE())  -- dependents living in a different city than their workplace
 AND e.salary > (SELECT AVG(salary) FROM employees WHERE j.job_id = e.job_id)-- employees whose salary is greater than the average salary of their job title
-AND j.job_title IN (SELECT job_title FROM jobs WHERE job_title LIKE '%director%') -- employees whose manager's job title includes the word 'director'
+AND m.job_id in (select job_id from jobs where job_title like '%director%') -- employees whose manager's job title includes the word 'director'
 ORDER BY dpt.department_name ASC;
