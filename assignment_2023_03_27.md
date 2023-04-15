@@ -65,17 +65,21 @@ WHERE LEN(l.postal_code) < 5;
    
 ACID is an acronym that stands for **Atomicity, Consistency, Isolation, and Durability.**
 
+Suppose a bank transfer operation from Account A to Account B involves the following steps:
+
+*Deduct the transfer amount from Account A <br>
+Add the transfer amount to Account B* <br>
+
+The ACID properties ensure that the transfer operation is processed reliably, even in the face of system failures or concurrent transactions. Here's how each property applies:
+
 ## Atomicity:
-This property ensures that each transaction is treated as a single, indivisible unit of work. It means that either all the changes in a transaction are committed to the database or none of them are.
-
-## Consistency:
-This property ensures that the database remains in a consistent state before and after the transaction. It means that the transaction must follow a set of rules and constraints to ensure data integrity.
-
+The entire transfer operation is treated as a single, indivisible unit of work. If any part of the operation fails, the entire transaction is rolled back and neither account is affected.
+## Consistency: 
+The transfer operation ensures that the total balance of all accounts remains unchanged. If the transfer operation succeeds, the total balance of all accounts remains the same as before the transfer.
 ## Isolation: 
-This property ensures that transactions are processed independently of each other. It means that each transaction operates as if it is the only transaction being processed, and it is not affected by other transactions running concurrently.
-
+The transfer operation is isolated from other concurrent transactions. If multiple transfer operations are happening simultaneously, each transaction sees a consistent view of the data, and the final outcome is the same as if the transactions had occurred serially.
 ## Durability: 
-This property ensures that once a transaction is committed to the database, it remains permanently stored even if there is a system failure.
+The result of the transfer operation is permanently stored in the database, even in the face of system failures such as power outages or hardware failures. Once the transfer operation has been committed, it remains committed even if the system crashes.
 
 # 5. There are five records in a data base. There is an index file associated with this and it contains the values 1,3,2,5 and 4. Which one of the fields is the index built from?
 After sorting the table by the Occupation column in ascending order, the original rows will get placed in the given sequence: 1, 3, 2, 5, 4. Therefore, it can be concluded that the index file is built from the *Occupation* column.
