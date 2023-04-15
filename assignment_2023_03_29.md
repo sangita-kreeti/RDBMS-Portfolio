@@ -10,43 +10,43 @@
 #  2. What are some of the benefits of using NoSQL databases over traditional SQL databases?
    
 ## Scalability: 
-    NoSQL databases are designed to scale horizontally, meaning that they can handle large amounts of data by distributing it across multiple servers. This makes it easier to handle large volumes of data as the database grows.
+NoSQL databases are designed to scale horizontally, meaning that they can handle large amounts of data by distributing it across multiple servers. This makes it easier to handle large volumes of data as the database grows.
 
 ## Flexibility:
-    NoSQL databases are schema-less, which means that data can be added or modified without having to define a schema beforehand. This makes it easier to handle unstructured and semi-structured data.
+NoSQL databases are schema-less, which means that data can be added or modified without having to define a schema beforehand. This makes it easier to handle unstructured and semi-structured data.
 
 ## High availability:
-    NoSQL databases are designed to be highly available, meaning that they can continue to operate even if one or more nodes fail. This makes it easier to ensure that data is always accessible and available.
+NoSQL databases are designed to be highly available, meaning that they can continue to operate even if one or more nodes fail. This makes it easier to ensure that data is always accessible and available.
 
 #  3. What are some common use cases for NoSQL databases?
 
 ## Big data:
-    NoSQL databases are ideal for handling large volumes of unstructured or semi-structured data, such as social media feeds, log files, and sensor data.
+NoSQL databases are ideal for handling large volumes of unstructured or semi-structured data, such as social media feeds, log files, and sensor data.
 
 ## Real-time data processing:
-    NoSQL databases are designed to handle high-velocity, real-time data processing and analysis, such as real-time analytics, fraud detection, and recommendation engines.
+NoSQL databases are designed to handle high-velocity, real-time data processing and analysis, such as real-time analytics, fraud detection, and recommendation engines.
 
 ## Internet of Things (IoT):
-    NoSQL databases are often used in IoT applications to store and analyze data from sensors and devices.
+NoSQL databases are often used in IoT applications to store and analyze data from sensors and devices.
 
 ## Content management:
-    NoSQL databases are well-suited for managing content, such as media files, documents, and web pages, where the structure of the data may vary widely.
+NoSQL databases are well-suited for managing content, such as media files, documents, and web pages, where the structure of the data may vary widely.
    
 # 4. What are the four main types of NoSQL databases, and what are their key characteristics?
 
 There are four main types of NoSQL databases, each with its own set of characteristics and use cases:
 
 ## Document databases:
-     Document databases store and manage semi-structured or unstructured data as documents. Document databases can be used to store data such as blog posts, user profiles, and e-commerce product catalogs. Examples of document databases include MongoDB, Couchbase, and RavenDB.
+Document databases store and manage semi-structured or unstructured data as documents. Document databases can be used to store data such as blog posts, user profiles, and e-commerce product catalogs. Examples of document databases include MongoDB, Couchbase, and RavenDB.
 
 ## Key-value databases:
-    Key-value databases store data as key-value pairs. Key-value databases are highly scalable and can be used for caching, session management, and real-time data processing. Examples of key-value databases include Redis, Riak, and Amazon DynamoDB.
+Key-value databases store data as key-value pairs. Key-value databases are highly scalable and can be used for caching, session management, and real-time data processing. Examples of key-value databases include Redis, Riak, and Amazon DynamoDB.
 
 ## Column-family databases: 
-    Column-family databases store data as columns rather than rows. Data is organized into column families, which contain columns with similar data types. Examples of column-family databases include Apache Cassandra, HBase, and Amazon SimpleDB.
+Column-family databases store data as columns rather than rows. Data is organized into column families, which contain columns with similar data types. Examples of column-family databases include Apache Cassandra, HBase, and Amazon SimpleDB.
 
 ## Graph databases:
-    Graph databases store data as nodes and edges, representing the relationships between data points. They can be used for tasks such as finding the shortest path between two nodes, calculating centrality, and detecting communities. Examples of graph databases include Neo4j, OrientDB, and ArangoDB.
+Graph databases store data as nodes and edges, representing the relationships between data points. They can be used for tasks such as finding the shortest path between two nodes, calculating centrality, and detecting communities. Examples of graph databases include Neo4j, OrientDB, and ArangoDB.
 
 
 # 5. What is the CAP theorem, and how does it relate to distributed systems?
@@ -56,7 +56,8 @@ There are four main types of NoSQL databases, each with its own set of character
 
 According to the CAP theorem, a distributed system can provide at most two out of these three guarantees: consistency, availability, and partition tolerance. In other words, it is impossible to simultaneously achieve all three guarantees in a distributed system.
 
-    For example, a distributed system that prioritizes consistency and partition tolerance may sacrifice availability in the event of a network partition. On the other hand, a system that prioritizes availability and partition tolerance may sacrifice consistency by allowing nodes to have inconsistent views of the data.
+## For example,
+a distributed system that prioritizes consistency and partition tolerance may sacrifice availability in the event of a network partition. On the other hand, a system that prioritizes availability and partition tolerance may sacrifice consistency by allowing nodes to have inconsistent views of the data.
 
 # 6. What are the three properties of the CAP theorem?
 
