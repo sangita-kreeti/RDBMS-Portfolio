@@ -28,7 +28,7 @@ select d.department_name,avg(salary) as [avg salary]
 from employees as e, departments as d
 where e.department_id=d.department_id
 group by d.department_name
-having avg(salary)>50000
+having avg(salary)>60000
 order by avg(salary) asc;
 
 --5. Write down the query to fetch department name assign to more than one Employee
@@ -37,7 +37,7 @@ select d.department_name,count(e.department_id)
 from employees as e, departments as d
 where e.department_id=d.department_id
 group by d.department_name
-having count(e.department_id)>2;
+having count(e.department_id)>1;
 
 
 --6. Write a query to show department_name and assigned To where assigned To will be "One candidate" if its assigned to only one employee otherwise "Multiple candidates"
