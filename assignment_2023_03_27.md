@@ -1,6 +1,9 @@
 # 1. Create a trigger to fill up the full_name column in the dependents table while
 
 ```sql
+
+****Sql Server****
+
 CREATE TRIGGER Trigger_dependents
 ON dependents
 AFTER INSERT
@@ -17,6 +20,8 @@ END;
 # 2. Create a trigger that stores the transaction records of each insert, update and delete operations performed on the locations table into locations_info table.
 
 ```sql
+****Sql Server****
+
 CREATE TRIGGER locations_trigger
 ON locations
 AFTER INSERT, UPDATE, DELETE
@@ -53,6 +58,9 @@ END;
 # 3. For the following tables create a view named employee_information with employee first name, last name, salary, department name, city, postal code insert only those records whose postal code length is less than 5.
 
 ```sql
+
+****Sql Server****
+
 CREATE VIEW employee_information AS
 SELECT e.first_name, e.last_name, e.salary, d.department_name, l.city, l.postal_code
 FROM employees e

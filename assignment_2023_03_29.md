@@ -83,3 +83,5 @@ This means that the state of the system may change over time, even without input
 This means that the system will eventually reach a consistent state, even in the presence of concurrent updates and network partitions.
 
 The BASE properties are related to the CAP theorem in that they both represent trade-offs that must be made when designing and implementing distributed systems. The CAP theorem highlights the trade-off between consistency, availability, and partition tolerance, while the BASE properties prioritize availability and scalability over strong consistency.
+
+
