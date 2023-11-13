@@ -16,4 +16,4 @@ In this repository, you'll find a variety of RDBMS-related questions and answers
 - Indexing and Optimization
 - Transactions and Concurrency
 
-Happy Learning! 🚀
+
